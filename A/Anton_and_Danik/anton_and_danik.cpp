@@ -15,21 +15,24 @@ int main()
 {
     int n;
     cin >> n;
-    string s;
+    string s;//Number of games won
     cin >> s;
     int a = 0, d = 0;
-
+    
     for (auto i = 0; i < n; i++)
     {
-        if (s[i] == 'A')
+        if (s[i] == 'A')//if Anton is winning the game
             a++;
         else
-            d++;
+            d++;//If Anton is not winning the game, Danik is.
     }
-    if (a > d)
+    
+    if (a > d)//Number of games won by Anton is more than that of Danik.
         cout << "Anton";
-    else if (d > a)
+    
+    else if (d > a)//Number of games won by Danik is more than that of Anton.
         cout << "Danik";
+    
     else
         cout << "Friendship";
 
